@@ -10,6 +10,7 @@ namespace Aula_2
             Ex2(args);
             Ex3(args);
             Ex4(args);
+            Ex5(args);
         }
 
         private static void Ex1(string[] args)
@@ -55,6 +56,20 @@ namespace Aula_2
             {
                 Console.WriteLine(i);
             }
+        }
+        private static void Ex5(string[] args)
+        {
+            int[] x = new int[5];
+            for (int i=0; i<5; i++)
+            {
+                Console.WriteLine("Introduza a idade do {0}º aluno: ", i+1);
+                int idade = int.Parse(Console.ReadLine());
+                x[i] = idade;
+            }
+            Array.Sort(x);
+            Console.WriteLine("O Aluno mais novo tem {0} anos de idade", x[0]);
+            Console.WriteLine("O Aluno mais velho tem {0} anos de idade", x[4]-20);
+            Console.WriteLine("Número de alunos: {0}", x.Length);
         }
     }
 }
